@@ -334,6 +334,15 @@ $(document).ready(function(){
     padding: 12px 16px;
     z-index: 1;
 }
+
+a:link, a:visited { 
+    color: (internal value);
+    text-decoration: none;
+}
+
+a:link:active, a:visited:active { 
+    color: (internal value);
+}
 	</style>
 </head>
 <body style="background-color: #1a1a1a;">
@@ -645,12 +654,12 @@ $(document).ready(function(){
         </div>
     </div>
 	<div class="screen">
-		<div class="col-md-12" style="background-color:#232323">
+		<div class="col-md-12" >
 		<div class="subject">
 			<center><iframe width="500" height="300" src="https://www.youtube.com/embed/84e0STf4b-4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><center>
 		</div>
 	</div>
-	<div class="col-md-12"  style="background-color:#232323">
+	<div class="col-md-12"  style="margin-bottom:10px;">
 				<center><p>ชื่อเรื่อง : Halloween</p></center>
 				<p>เรื่องย่อ : เกิดขึ้นในโลกอนาคต
 				ในสมัยที่ความสามารถต่างๆของผู้มีพลังพิเศษ (ผู้มีพลังจิต, Psychics, Espers)
@@ -660,20 +669,19 @@ $(document).ready(function(){
 				โทมะได้ช่วยเหลืออินเด็กซ์ไว้ ให้ที่พักพิงกับเธอ และคอยช่วยเหลือเธอจาการถูกตามล่า จากทั้งฝ่ายเวทมนตร์และฝ่ายวิทยาศาสตร์
 				</p>
 	</div>
-	<?php for($i=0;$i<6;$i++) {?>
-			<div class="row"  style="background-color:#232323">
-		<a href="<?php echo site_url('sar/documents/Hackaday/Hackaday_controller/movie_video');?>" class="col">
+	<?php for($i=1;$i<6;$i++) {?>
+		<div class="col-md-12 link-movie">
+			<a href="<?php echo site_url('sar/documents/Hackaday/Hackaday_controller/movie_video');?>" class="col">
 				<div class="col-md-3 box" align="middle">
-				
 					<img  src="https://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/halloween.jpg" width="75%" height="100%">
 				</div>
 				<div class="col-md-9 box">
-						<h1>Halloween EP.<?php echo $i;?></h1>
-						<p style="color:#737373">ยอดดู</p>
-						<p style="color:#737373">ชื่อคนทำ</p>
+					<h1>Halloween EP.<?php echo $i;?></h1>
+					<p style="color:#737373">ยอดดู</p>
+					<p style="color:#737373">ชื่อคนทำ</p>
 				</div>
-		</a>
-			</div>
+			</a>
+		</div>
 	<?php }?>	
 	</div>
 </body>
@@ -720,8 +728,8 @@ $(document).ready(function(){
     width: 70%;
     padding: 10px;
 }
-.row:hover{
-	background-color: #363636;
+.link-movie:hover{
+	background-color: #232323;
 }
 </style>
 	</div>
