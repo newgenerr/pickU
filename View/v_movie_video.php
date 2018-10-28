@@ -45,7 +45,37 @@ $(document).ready(function(){
 		}
 	});
 });
-		
+/*
+		<div class="col-md-12">
+			<div class="col-md-9" style="position:relative;border-style: solid; border-width: 1px;color:black;background-color:#b7b7b7;border-radius:12.5%;height:60px">
+				<div style="position:absolute;bottom:0;right:0">
+				0.00
+				</div>
+			</div>
+			<div class="col-md-3">
+				<img src="https://png.pngtree.com/svg/20170602/avatar_107646.png " style="border-radius:50%;width:40px;height:40px">
+			</div>
+		</div>
+		<div class="col-md-12">	
+			<div class="col-md-4">
+				<img src="https://png.pngtree.com/svg/20170602/avatar_107646.png " style="border-radius:50%;width:40px;height:40px">
+			</div>
+			<div class="col-md-8" style="position:relative;border-style: solid; border-width: 1px;color:black;background-color:skyblue;border-radius:12.5%;height:60px">
+				<div style="position:absolute;bottom:0;right:0">
+				0.01
+				</div>
+			</div>
+		</div>
+*/
+function myFunction() {
+	for(var i=0;i<=4;i++){
+		setTimeout(function(){ 
+			$("#board").append('<div class="col-md-12"> <div class="col-md-9" style="position:relative;border-style: solid; border-width: 1px;color:black;background-color:#b7b7b7;border-radius:12.5%;height:60px">ช้อความ<div style="position:absolute;bottom:0;right:0"> 0.00 </div> </div> <div class="col-md-3"> <img src="https://png.pngtree.com/svg/20170602/avatar_107646.png " style="border-radius:50%;width:40px;height:40px"> </div> </div>');
+		}, time);
+		time += 5000;
+	}
+}
+</script>
 	</script>
 	<style>
 		.screen{
@@ -644,37 +674,89 @@ $(document).ready(function(){
             </div>
         </div>
     </div>
+	
 	<div class="screen">
-		<div class="col-md-12" style="background-color:#232323">
-		<div class="subject">
-			<center><iframe width="500" height="300" src="https://www.youtube.com/embed/84e0STf4b-4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><center>
-		</div>
-	</div>
-	<div class="col-md-12"  style="background-color:#232323">
-				<center><p>ชื่อเรื่อง : Halloween</p></center>
-				<p>เรื่องย่อ : เกิดขึ้นในโลกอนาคต
-				ในสมัยที่ความสามารถต่างๆของผู้มีพลังพิเศษ (ผู้มีพลังจิต, Psychics, Espers)
-				กลายเป็นสาขาหนึ่งของวิทยาศาสตร์ โคจรมาพบกับ อำนาจเหนือธรรมชาติอีกชนิดหนึ่ง คือ เวทมนตร์ (Magic)
-				เรื่องราวดำเนินไป ณ เมืองแห่งการศึกษา ซึ่งมีเทคโนโลยีสูงมาก อยู่ทางตะวันตกของกรุงโตเกียว ประเทศญี่ปุ่น วันหนึ่งชีวิตของโทมะก็ต้องเปลี่ยนไป เมื่อมีแม่ชี (อายุไล่เลี่ยกับเขา) คนหนึ่ง
-				นอนสลบพาดอยู่ที่ระเบียงห้องของเขา เธอชื่อว่าอินเด็กซ์ อินเด็กซ์มีความทรงจำที่ดีมาก เธอสามารถจดจำ คัมภีร์เวทมนตร์กว่าแสนเล่มไว้ได้ ทำให้เธอต้องถูกตามล่าจากเหล่าผู้มีเวทมนตร์ 
-				โทมะได้ช่วยเหลืออินเด็กซ์ไว้ ให้ที่พักพิงกับเธอ และคอยช่วยเหลือเธอจาการถูกตามล่า จากทั้งฝ่ายเวทมนตร์และฝ่ายวิทยาศาสตร์
-				</p>
-	</div>
-	<?php for($i=0;$i<6;$i++) {?>
-			<div class="row"  style="background-color:#232323">
-		<a href="<?php echo site_url('sar/documents/Hackaday/Hackaday_controller/video');?>" class="col">
-				<div class="col-md-3 box" align="middle">
-				
-					<img  src="https://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/halloween.jpg" width="75%" height="100%">
-				</div>
-				<div class="col-md-9 box">
-						<h1>Halloween EP.<?php echo $i;?></h1>
-						<p style="color:#737373">ยอดดู</p>
-						<p style="color:#737373">ชื่อคนทำ</p>
-				</div>
-		</a>
+		<div class="col-md-9" style="background-color:#232323;height:660px">
+			<div class="col-md-12" >
+				<video id="myVideo"class="col-md-12" controls onplay="myFunction()">
+				  <source src="http://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/videoplayback.mp4" type="video/mp4">
+				  Your browser does not support HTML5 video.
+				</video>
 			</div>
-	<?php }?>	
+			<div class="col-md-12"  style="height:30%;background-color:#232323">
+				<div class="col-md-8">
+				<h2>Holloween Ep.2</h2>
+				<h3>5,674 View</h3>
+				</div>
+				<div class="col-md-4">
+						<div>
+							<img src="http://www.creditlenders.info/wp-content/uploads/the-top-3-tips-for-creating-the-perfect-channel-logo-promolta-blog-youtube-channel-logos-150x150.png " style="border-radius:50%;width:70px;height:70px">							
+							<span style="font-size:20px;font-weight:bold;">
+								one Eye Two Color
+							</span>
+						</div>
+					<div class="col-md-6 col-md-offset-3">
+						<button style="width:100%;color:white;background-color:red">ติดตาม</button>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<p>เรื่องย่อตอนนี้ : เกิดขึ้นในโลกอนาคต
+					ในสมัยที่ความสามารถต่างๆของผู้มีพลังพิเศษ (ผู้มีพลังจิต, Psychics, Espers)
+					กลายเป็นสาขาหนึ่งของวิทยาศาสตร์ โคจรมาพบกับ อำนาจเหนือธรรมชาติอีกชนิดหนึ่ง คือ เวทมนตร์ (Magic)
+					เรื่องราวดำเนินไป ณ เมืองแห่งการศึกษา ซึ่งมีเทคโนโลยีสูงมาก อยู่ทางตะวันตกของกรุงโตเกียว ประเทศญี่ปุ่น วันหนึ่งชีวิตของโทมะก็ต้องเปลี่ยนไป เมื่อมีแม่ชี (อายุไล่เลี่ยกับเขา) คนหนึ่ง
+					นอนสลบพาดอยู่ที่ระเบียงห้องของเขา เธอชื่อว่าอินเด็กซ์ อินเด็กซ์มีความทรงจำที่ดีมาก เธอสามารถจดจำ คัมภีร์เวทมนตร์กว่าแสนเล่มไว้ได้ ทำให้เธอต้องถูกตามล่าจากเหล่าผู้มีเวทมนตร์ 
+					โทมะได้ช่วยเหลืออินเด็กซ์ไว้ ให้ที่พักพิงกับเธอ และคอยช่วยเหลือเธอจาการถูกตามล่า จากทั้งฝ่ายเวทมนตร์และฝ่ายวิทยาศาสตร์<br>
+					</p>
+				</div>
+			</div>
+		</div>
+			<div class="col-md-3" style="height:640px">
+				<div class="col-md-12" style="height:80%;overflow-y: scroll;;background-color:white;color:black" id="board">	
+					
+				</div>
+				<div class="col-md-12" style="height:20%;background-color:grey">
+					<div class="col-md-9"style="height:100%">
+						<textarea type="text" style="height:100%;width:100%;color:black;"></textarea>
+					</div>
+					<div class="col-md-3" style="height:100%;">
+						<button style="height:100%;width:60px;color:black">Send</button>
+					</div>
+				</div>
+			</div>
+		<div class="col-md-12">
+			<h2>Recommended</h2>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-2 col-md-offset-1" style="padding:10px ;background-color:#232323">
+				<img src="http://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/avenger.jpg"width="100%" height="280px"><br>
+				<p><span style="font-size:20px;font-weight:bold">Avenger </span><br>15 ตอน <br>5423 view ☺ 1 day ago</p>
+			</div>
+			<div class="col-md-2 " style="padding:10px ;background-color:#232323">
+				<img src="http://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/doraemon.jpg"width="100%" height="280px"><br>
+				<p><span style="font-size:20px;font-weight:bold">DORAEMON </span><br>19 ตอน <br>5423 view ☺ 2 day ago</p>
+			</div>
+
+			<div class="col-md-2 " style="padding:10px ;background-color:#232323">
+				<a href="<?php echo site_url('sar/documents/Hackaday/Hackaday_controller/movie_description');?>">
+				<img src="http://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/halloween.jpg"width="100%" height="280px"><br>
+
+				<p><span style="font-size:20px;font-weight:bold">HALLOWEEN </span><br>16 ตอน <br>5423 view ☺ 1 day ago</p>
+				</a>
+			</div>
+
+			<div class="col-md-2 " style="padding:10px ;background-color:#232323">
+				<img src="http://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/homestay.jpg"width="100%" height="280px"><br>
+
+				<p><span style="font-size:20px;font-weight:bold">HOMESTAY </span><br>12 ตอน <br>5423 view ☺ 2 day ago</p>
+			</div>
+
+			<div class="col-md-2 " style="padding:10px ;background-color:#232323;position:relative;">
+				<img src="http://10.80.39.17/TSP59/Nursing/application/views/sar/documents/Hackaday/Photo/spider.jpg"width="100%" height="280px"><br>
+				<span style="width:calc(100% - 20px);height:280px;position:absolute;top:10px;background-color:black;opacity:0.8;text-align: center;font-size:24px;"><br><br><br><br>ดูเพื่มเติม</span>
+				<p><span style="font-size:20px;font-weight:bold">You are the Best!!</span><br>11 ตอน <br>5423 view ☺ 2 day ago</p>
+			</div>
+		</div>
+		
 	</div>
 </body>
 </html>
