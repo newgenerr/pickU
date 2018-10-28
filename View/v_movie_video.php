@@ -44,6 +44,10 @@ $(document).ready(function(){
 			$("#loginbutton").css("display","none");
 		}
 	});
+	$(document).on("click","#submit",function(){
+		var text = $('#text').val();
+		$("#board").append('<div class="col-md-12"> <div class="col-md-4"> <img src="https://png.pngtree.com/svg/20170602/avatar_107646.png " style="border-radius:50%;width:40px;height:40px"></div> <div class="col-md-8" style="position:relative;border-style: solid; border-width: 1px;color:black;background-color:skyblue;border-radius:12.5%;height:60px">'+text+'<div style="position:absolute;bottom:0;right:0"> 0.00 </div> </div> </div>');
+	});
 });
 /*
 		<div class="col-md-12">
@@ -67,10 +71,11 @@ $(document).ready(function(){
 			</div>
 		</div>
 */
+var time=0;
 function myFunction() {
 	for(var i=0;i<=4;i++){
 		setTimeout(function(){ 
-			$("#board").append('<div class="col-md-12"> <div class="col-md-9" style="position:relative;border-style: solid; border-width: 1px;color:black;background-color:#b7b7b7;border-radius:12.5%;height:60px">ช้อความ<div style="position:absolute;bottom:0;right:0"> 0.00 </div> </div> <div class="col-md-3"> <img src="https://png.pngtree.com/svg/20170602/avatar_107646.png " style="border-radius:50%;width:40px;height:40px"> </div> </div>');
+			$("#board").append('<div class="col-md-12"> <div class="col-md-9" style="position:relative;border-style: solid; border-width: 1px;color:black;background-color:#b7b7b7;border-radius:12.5%;height:60px">ข้อความ<div style="position:absolute;bottom:0;right:0"> 0.00 </div> </div> <div class="col-md-3"> <img src="https://png.pngtree.com/svg/20170602/avatar_107646.png " style="border-radius:50%;width:40px;height:40px"> </div> </div>');
 		}, time);
 		time += 5000;
 	}
@@ -715,11 +720,11 @@ function myFunction() {
 					
 				</div>
 				<div class="col-md-12" style="height:20%;background-color:grey">
-					<div class="col-md-9"style="height:100%">
-						<textarea type="text" style="height:100%;width:100%;color:black;"></textarea>
+					<div class="col-md-9"style="height:100%" >
+						<textarea type="text" style="height:100%;width:100%;color:black;" id="text"></textarea>
 					</div>
 					<div class="col-md-3" style="height:100%;">
-						<button style="height:100%;width:60px;color:black">Send</button>
+						<button style="height:100%;width:60px;color:black" id="submit">Send</button>
 					</div>
 				</div>
 			</div>
